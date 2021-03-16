@@ -48,10 +48,6 @@ var getUserRepos = function(user) {
 };
 
 var displayRepos = function (repos, searchTerm) {
-    //clear old content 
-    repoContainerEl.textContent = "";
-    repoSearchTerm.textContent = searchTerm;
-
     //check if api returned any repos
     if(repos.length === 0) {
         repoContainerEl.textContent = "No repositories found.";
@@ -62,10 +58,12 @@ var displayRepos = function (repos, searchTerm) {
     for (var i = 0; i < repos.length; i++){
         //format repo name 
         var repoName = repos[i].owner.login + "/" + repos[i].name;
+  
 
         //create a container for reach repo
-        var repoEl = document.createElement("div");
+        var repoEl = document.createElement("a");
         repoEl.classList = "list-item flex-row justify-space-between align-center";
+        repoEl.setAttribute("href", "./single-repo.html?repo=" + repoName);
 
         //create a span element to hold respository name 
         var titleEl = document.createElement("span");
