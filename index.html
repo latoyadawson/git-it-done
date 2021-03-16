@@ -20,8 +20,9 @@
 
 
   <main class="flex-row justify-space-between">
-    <!-- search by user name start-->
+   
     <div class="col-12 col-md-4">
+     <!-- search by user name start-->
       <div class="card">
         <h3 class="card-header text-uppercase">Search By User</h3>
         <form id="user-form" class="card-body">
@@ -30,8 +31,23 @@
           <button type="submit" class="btn">Get User</button>
         </form>
       </div>
+      <!-- search by user name end-->
+
+      <!--search by topic start-->
+      <div class="card">
+        <h3 class="card-header text-uppercase">Search By Topic</h3>
+        <div class="card-body" id="language-buttons">
+          <button class="btn" data-language="javascript">JavaScript</button>
+          <button class="btn" data-language="html">HTML</button>
+          <button class="btn" data-language="css">CSS</button>
+        </div>
+      </div>
+      <!--search by topic end-->
+
     </div>
-    <!-- search by user name end-->
+    
+
+    
 
     <!-- show repos start -->
     <div class="col-12 col-md-8">
@@ -39,6 +55,10 @@
       <div id="repos-container" class="list-group"></div>
     </div>
     <!-- show repos end -->
+
+    
+
+
   </main>
 
 
